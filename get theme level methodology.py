@@ -18,11 +18,14 @@ if pd.isna(start_index):
 
 for index, row in df.loc[start_index:].iterrows():
     article = row['Articles']
-    pyperclip.copy(f'''The following is a text from the article "{article}" I want you to provide me with the 'Theme Analysis' in less than 20 words, 'Level of Analysis' in either of those three values (Individual / Organizational / Industry Field), and the 'Research Methodology' in either of those two values(Qualitative / Quantitative) separate the resultes with this charector '|'
+    pyperclip.copy(f'''The following is a text from the article "{article}" I want you to provide me with the 'Theme Analysis' in less than 20 words, 'Level of Analysis' in either of those three values (Individual / Organizational / Industry Field), and the 'Research Methodology' in either of those two values(Qualitative / Quantitative) separate the results with this character '|'
+The Text:
+
+
+
 please give simple answers.  
 with values only
-without the keys
-The Text:\n ''')
+without the keys''')
 
     values = input(f"Enter the values for '{article}' separated by '|' : ")
 
